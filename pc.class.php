@@ -23,20 +23,25 @@
         public function get_anno(){
             return $this->anno;
         }
+        public function get_peso()
+        {
+            return $this->peso;
+        }
     }
 
-     class Portatili extends Pc 
-     {
+    class Portatili extends Pc 
+    {
         
         public $tipologia;
         public $schermo;
         public $colore;
 
-        public function __construct($_tipologia,$_schermo)
+        public function __construct($_tipologia,$_schermo,$_colore)
         {
-            parent::__construct(1,2,3,4,5,6);
+            parent::__construct('asus','3Kg','999$','40X50','gaming',2021);
             $this->schermo = $_schermo;
             $this->tipologia = $_tipologia;
+            $this->colore = $_colore;
 
         }
 
@@ -46,4 +51,26 @@
         }
 
         
-     }
+    }
+
+    class Fissi extends Pc
+    {
+        // parent::__construct(1,2,3,4,5,6);
+
+        public $tipologia;
+        public $dimensione;
+        public $colore;
+        
+        public function __construct($_tipologia, $_dimensione, $_colore)
+        {
+            parent::__construct('HP','2Kg',3,4,5,2020);
+            $this->tipologia = $_tipologia;
+            $this->dimensione = $_dimensione;
+            $this->colore = $_colore;
+        }
+
+        public function get_tipologia()
+        {
+            return $this->tipologia;
+        }
+    }

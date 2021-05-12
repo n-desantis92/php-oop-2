@@ -1,15 +1,15 @@
 <?php
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    include_once __DIR__ . '/pc.class.php';
+include_once __DIR__ . '/pc.class.php';
 
-    $pc1 = new Pc(1, 2, 3, 4, 5, 2021);
-    $pc2 = new Portatili(10, 12);
-
-    $marca = $pc1->marca;
+$pc1 = new Pc(1, 2, 3, 4, 5, 2021);
+$pc2 = new Portatili('notebook', '17p', 'red', 1, 2, 3, 4);
+$pc3 = new Fissi('pc-corto', '33X33', 'black');
+$marca = $pc1->marca;
 ?>
 
 <!DOCTYPE html>
@@ -24,16 +24,28 @@
 
 <body>
     <ul>
-        <li><?php echo 'ciao' ?></li>
-        <li><?php echo $pc1->get_anno() ?></li>
-        <li><?php echo $pc1->marca ?></li>
+        <li>
+            <h2>portatili</h2>
+        </li>
+        <li>Tipologia: <?php echo $pc2->tipologia; ?></li>
+        <li>la marcha è: <?php echo $pc2->marca; ?></li>
+        <li>il suo schermo è: <?php echo $pc2->schermo; ?></li>
+        <li>il suo colore è: <?php echo $pc2->colore; ?></li>
+        <li><?php echo $pc2->get_anno(); ?></li>
 
     </ul>
     <hr>
     <ul>
-        <li><?php echo $pc2->schermo ?></li>
-        <li><?php echo $pc2->tipologia ?></li>
-        <li><?php echo $pc2->get_anno() ?></li>
+        <li>
+            <h2>fissi</h2>
+        </li>
+        <li>marca: <?php echo $pc3->marca ?></li>
+        <li>tipologia: <?php echo $pc3->tipologia ?></li>
+        <li>dimensione: <?php echo $pc3->dimensione ?></li>
+        <li>colore: <?php echo $pc3->colore ?></li>
+        <li>peso: <?php echo $pc3->get_peso() ?></li>
+
+        <li>anno: <?php echo $pc3->get_anno() ?></li>
     </ul>
 </body>
 

@@ -27,6 +27,10 @@
         {
             return $this->peso;
         }
+        public function get_prezzo()
+        {
+            return $this->prezzo;
+        }
     }
 
     class Portatili extends Pc 

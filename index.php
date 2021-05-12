@@ -31,7 +31,9 @@ $marca = $pc1->marca;
         <li>la marcha è: <?php echo $pc2->marca; ?></li>
         <li>il suo schermo è: <?php echo $pc2->schermo; ?></li>
         <li>il suo colore è: <?php echo $pc2->colore; ?></li>
-        <li><?php echo $pc2->get_anno(); ?></li>
+        <li>anno: <?php echo $pc2->get_anno(); ?></li>
+        <li>prezzo: <?php echo $pc2->get_prezzo(); ?></li>
+
 
     </ul>
     <hr>
